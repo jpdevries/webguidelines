@@ -44,16 +44,16 @@ Even those defending inaccessible experiences on Stack Overflow get frustrated w
 
 I encourage you to allow yourself the understand that fear is often&nbsp;merely:
 
- - <strong>F</strong>alse
- - <strong>E</strong>vidence
- - <strong>A</strong>ppearing
- - <strong>R</strong>eal
+- **F**alse
+- **E**vidence
+- **A**ppearing
+- **R**eal
 
- So what is the false evidence assumed by the anti&ndash;a11y crowd and why does it appear real to them? By assuming accessibility must be "more work" than otherwise they begin to buy-in to this idea before they've even allowed themselves to realize how terrible wrong they are. This may not be their fault though. They may have tried to take a non&ndash;accessible experience and "make it accessible" without breaking changes long after it has been built. In that case accessibility is not only harder but not even worth it. Imagine trying to install a shower in the middle of a building with concrete floors that wasn't plumbed for it. You'll need a wrecking ball or&nbsp;two. The key is to keep accessibility in mind from the&nbsp;beginning.
+So what is the false evidence assumed by the anti&ndash;a11y crowd and why does it appear real to them? By assuming accessibility must be "more work" than otherwise they begin to buy-in to this idea before they've even allowed themselves to realize how terrible wrong they are. This may not be their fault though. They may have tried to take a non&ndash;accessible experience and "make it accessible" without breaking changes long after it has been built. In that case accessibility is not only harder but not even worth it. Imagine trying to install a shower in the middle of a building with concrete floors that wasn't plumbed for it. You'll need a wrecking ball or&nbsp;two. The key is to keep accessibility in mind from the&nbsp;beginning.
 
- Builders have construction codes when they build that set standards for safety and accessibility. When a builder ignores these codes and refuses to do things like make the entrance wheelchair accessible that building begins to rot the community around it. The community isn't a place of inclusion anymore. That's why there are laws about these things. So why is it any different in our&nbsp;industry?
+Builders have construction codes when they build that set standards for safety and accessibility. When a builder ignores these codes and refuses to do things like make the entrance wheelchair accessible that building begins to rot the community around it. The community isn't a place of inclusion anymore. That's why there are laws about these things. So why is it any different in our&nbsp;industry?
 
- Ironically, the hyper&ndash;accessible nature of the web make accessibility standards more difficult to enforce and standardize than in other industries. It is much more approachable, and therefore accessible, to spin up a web server and start hosting a website than it is to say buy property, obtain the necessary permits and begin breaking ground. You can have the whole thing done in a few hours even with no experience and next thing you know, you are publishing to the web. Your journey is to graduate from a publisher to an architect.
+Ironically, the hyper&ndash;accessible nature of the web make accessibility standards more difficult to enforce and standardize than in other industries. It is much more approachable, and therefore accessible, to spin up a web server and start hosting a website than it is to say buy property, obtain the necessary permits and begin breaking ground. You can have the whole thing done in a few hours even with no experience and next thing you know, you are publishing to the web. Your journey is to graduate from a publisher to an architect.
 
 <h3 id="good-news">The Good News</h3>
 You've been wondering what the good news is in all this so here it is. Accessibility doesn't have to be any more complicated than you make it. If you begin your experience by writing semantic HTML then it already was accessible before you screwed it up by making it fancy with that one script library or whatever. If you jumped straight into JavaScript and didn't start with HTML the solution is simple. Start completely over, this time with an HTML&ndash;first workflow. HTML is accessible so make sure you start with&nbsp;it.

@@ -20,9 +20,9 @@ WIP. Best practices to use when building any web based&nbsp;experience.
 </ol>
 
 <h2 id="preface">Preface</h2>
-As you author the web professionally you should strive to create interfaces any user can access. So how do you handle this responsibility? Relax, we'll walk you through it with these simple guidelines, but first you must understand a few things.
+As you author the web you should strive to create interfaces any user can access and use with ease. So how do you handle this responsibility? Relax, we'll walk you through it with these simple guidelines, but first you must understand a few things.
 
-Know that your HTML documents aren't written and then published; they are alive. The experience they offer changes as browsers and web standards evolve. What an exciting medium. You've chosen wisely.
+Know that your HTML documents aren't written in stone; they are alive. The experience they offer changes as browsers and web standards evolve. What an exciting medium. You've chosen wisely.
 
 As you work through these guidelines your hyper&ndash;text documents will begin to make use of the evolving browsers that interpret them. As new features land in browsers your experience becomes lighter and more enhanced with time. That is the signature of a Front&ndash;End Developer, and you'll learn to sign it in your own way.
 
@@ -37,7 +37,7 @@ We all know the desire to discover, process, and share information is a defining
 
 > You are a user. So ask yourself, have you acknowledged your reliance on accessibility?
 
-You see, all users are passionate about accessibility whether they realize it or not. They might not know [what a11y stands for]() but if you were to ask them to name their favorite devices and features sure enough you will find it is the accessible experiences that attract them. Let's take Siri for example. First and foremost, Siri is an accessibility feature. Siri is useful to the blind as well as the eagle&ndash;eyed parent trying to pull up directions while managing a van full of hyper kids who just wont their first soccer match. You see regardless of if the person has a permanent or contextual lack of ability, they rely on accessibility. They rely on you. Know that when you build accessible experiences you build experiences that are better for anyone in any context.
+You see, all users are passionate about accessibility whether they realize it or not. They might not know what a11y stands for but if you were to ask them to name their favorite devices and features sure enough you will find it is the accessible experiences that attract them. Let's take Siri for example. First and foremost, Siri is an accessibility feature. Siri is useful to the blind as well as the eagle&ndash;eyed parent trying to pull up directions while managing a van full of hyper kids who just wont their first soccer match. You see regardless of if the person has a permanent or contextual lack of ability, they rely on accessibility. They rely on you. Know that when you build accessible experiences you build experiences that are better for anyone in any context.
 
 <h3 id="the-fear">FEAR</h3>
 Even those defending inaccessible experiences on Stack Overflow get frustrated when they try to access a non&ndash;responsive and therefore less accessible interface on their smartphone. They care about accessibility too; they just haven't actualized that in their workflow yet. This is likely because they are afraid of their false impression of what they think creating accessible experiences&nbsp;entails.

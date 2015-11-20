@@ -110,7 +110,7 @@ Before you create a web interface allow yourself to consider the following confi
  - Change font&ndash;size
  - Change font&ndash;face
  - Disable font&ndash;face
- - Enable a High&ndash;Contract (or other) theme
+ - Enable a High&ndash;Contrast (or other) theme
  - Configure the voice used to read posts
  - Opt out of loading high&ndash;resolution assets
 

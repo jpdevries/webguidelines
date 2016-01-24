@@ -1,154 +1,148 @@
 [1]:http://markup.tips/htmlftw
 [2]:http://markup.tips/settings.html#focus
-[3]:https://gtmetrix.com/put-javascript-at-bottom.html
+[3]:https://github.com/jpdevries/webguidelines
 [4]:http://markup.tips/tips/making-your-markup-speak.html#focus
-[5]:https://css-tricks.com/why-ems/
-[6]:http://markup.tips/tips/adopting-orphans.html#focus
+[5]:http://youmightnotneedjquery.com/#request
+[6]:https://github.com/jpdevries/webguidelines#making-pages-usable
 
-# Web Guidelines 0.0
-WIP. Best practices to use when building any web based&nbsp;experience.
+# Manager Interface Guidelines 0.0
+WIP. Best practices to use when building any web based manager&nbsp;experience.
 
 <h2 id="toc">Table of Contents</h2>
 
 <ol>
   <li><a href="#preface">Preface</a></li>
   <li>
-    Making Pages
+    Making Manager Interfaces
     <ol>
       <li><a href="#making-pages-accessible">Accessible</a></li>
-      <li><a href="#making-pages-audible">Audible</a></li>
+      <li><a href="#making-pages-accessible">Asyncronous</a></li>
       <li><a href="#making-pages-configurable">Configurable</a></li>
       <li><a href="#making-pages-enhanceable">Enhanceable</a></li>
+      <li><a href="#making-pages-future-proof">Future Proof</a></li>
+      <li><a href="#making-pages-fun">Fun</a></li>
       <li><a href="#making-pages-legible">Legible</a></li>
-      <li><a href="#making-pages-optimal">Optimal</a></li>
+      <li><a href="#making-pages-lightweight">Lightweight</a></li>
+      <li><a href="#making-pages-syncronous">Syncrounous</a></li>
       <li><a href="#making-pages-usable">Usable</a></li>
+      <li><a href="#making-pages-responsive">Responsive</a></li>
     </ol>
+  </li>
+  <li>
+    <a href="#authoring-framework-agnostic-apis">Authoring Framework Agnostic APIs</a>
+  </li>
+  <li>
+     Register Client Scripts Responsively
+  </li>
+  <li>
+    Leveraging the Browser Cache
+  </li>
+  <li>
+    Progressively Enhancing Standard Form Elements
   </li>
 </ol>
 
 <h2 id="preface">Preface</h2>
-As you author the web you should strive to create interfaces any user can access and use with ease. So how do you handle this responsibility? Relax, we'll walk you through it with these simple guidelines, but first you must understand a few things.
 
-Know that your HTML documents aren't written in stone; they are alive. The experience they offer changes as browsers and web standards evolve. What an exciting medium. You've chosen wisely.
+As you create interfaces that enable users to author the web keep in mind the [guidelines for creating&nbsp;webpages][3] as well as the guidelines&nbsp;below.
 
-As you work through these guidelines your hyper&ndash;text documents will begin to make use of the evolving browsers that interpret them. As new features land in browsers your experience becomes lighter and more enhanced with time. That is the signature of a Front&ndash;End Developer, and you'll learn to sign it in your own way.
+## Making Manager Interfaces Accessible
+Accessibility isn't just about screen readers, keyboard support, or `.no-js` support. Nor is it just about responsive design, ARIA roles, and safe color contrasts ratios. To keep things accessible, keep your most inaccessible denominator in mind. Who is your furthest user? Is it a desktop on a broadband connection or a mobile user on a pay-per-byte connection in Africa? Whoever your lowest common denominator is, design for them. Otherwise, you'll always be left wondering what users are left beyond your interface's reach.
 
-<a name="we-are-all-disabled">Understand that we are all disabled</a>. Our abilities are relative to the context of the device we access an experience through. Know that there are people and there are users. One person can be many different users in any given day. As you go from using a high powered desktop and mouse&ndash;enabled computer to using a cellular low&ndash;power touch device your abilities change. You may be the same person but you are now a &#8220;disabled&#8221; user frustrated that the interfaces you are trying to access aren't designed to accommodate your current abilities.
+## Making Manager Interfaces Asynchronous
+Once your manager interface is functional as synchronous pages you are ready to enhance your interface. By making your interface synchronous with an [HTML-first][1] approach, data for your your application that may otherwise be loaded by scripts may be already accessible in the page. Take these opportunities to keep your JavaScript layer lightweight by capitalizing what is already part of the DOM it is enhancing.
 
-The thought of crafting experiences that can be used by anyone daunts you until you discover that accessibility isn't something you have to roll up your sleeves and add to your experience somehow at the end. Authoring pages HTML&ndash;first allows interfaces to be enhanced and a-synchronized in a progressive, rather than an aggressive manor. At ground&ndash;level we have an experience that anyone can access before we even start styling it with CSS and long before we enhance it with asynchronous&nbsp;scripts.
+## Making Manager Interfaces Configurable
+You've taken on an interesting challenge. Designing a manager interface means designing for a wide variety of people. And any one person can be a number of users throughout the day. How could we possibly satisfy them all with the same styles? We can't, so we don't. Create a simple settings page for your interface that contains components that allow users to choose form a variety of `font-family`, `font-size`, and color contrast options. Within these components, use JavaScript to listen for updates and store the most recent values of each component using `localStorage`. Users can now easily communicate with the interface and let it know how they would like it to be customized! This is a great example of JavaScript being used to enhance accessibility.
 
-Experiences you create are buildings entered, re-visited, and avoided by a wide audience of users. You'll build skyscrapers of experiences and from the wheel&ndash;chair access ramp on the first floor to the helicopter landing pad on the roof your users will enter the building all to find the same realization: while our abilities may very greatly and change with time we all justly deserve &nbsp;access.
+## Making Manager Interfaces Enhanceable
+By starting with asynchronous and framework agnostic HTML, our interfaces are inherently enhanceable. Since the API is framework agnostic and doesn't require any particular framework, plugin developers have the choice of using any framework or none. To keep your manager interface enhanceable, keep it out-datable and built with web standards.
 
-<h2 id="making-pages-accessible">Making Pages Accessible</h2>
-We all know the desire to discover, process, and share information is a defining part of the human experience. So, who are we to decide who deserves that experience and who does not? Unfortunately as an industry we deprive groups of users the ability to access experiences simply because some of us are unwilling to build experiences a top semantic hyper&ndash;text. Think about that. Today people use web based apps and services to aid them with sensitive and important areas of their lives. If you find yourself drawing a line between the users that may access your experience and those that may not stop and consider these truths. If you are comfortable with shutting users out don't be surprised if fewer show up to see what your experience to offer as it progressively&nbsp;decays.
+## Making Manager Interfaces Future Proof
+When using semantic versioning for our interfaces, we can't go making breaking changes over night. This means that one of the expenses to using a framework within our API is that if that version of or the framework itself become outdated so do we. Web Standards don't go stale. By building a framework agnostic API upon web standards, we anxiously anticipate new features that land in browsers rather than fear the irrelevance they would bring to a datable codebase.
 
-> You are a user. So ask yourself, have you acknowledged your reliance on accessibility?
+## Making Manager Interfaces Fun
+All seriousness aside, you owe it to your user to allow them to have a little fun. Simple CSS animations and other clever interactions make an interface less of a bore to use. Make an effort to keep your interface not just usable but fun to use.
 
-You see, all users are passionate about accessibility whether they realize it or not. They might not know what a11y stands for but if you were to ask them to name their favorite devices and features sure enough you will find it is the accessible experiences that attract them. Let's take Siri for example. First and foremost, Siri is an accessibility feature. Siri is useful to the blind as well as the eagle&ndash;eyed parent trying to pull up directions while managing a van full of hyper kids who just wont their first soccer match. You see regardless of if the person has a permanent or contextual lack of ability they rely on accessibility. They rely on you. Know that when you build accessible experiences you build experiences that are better for anyone in any&nbsp;context.
+## Making Manager Interfaces Legible
+By making your manger interface configurable with `font-size` and `font-family` preferences you have already made your interface capable of becoming more legible to each individual user. In addition to allowing the legibility of your interface to be configured, keep in mind color contrast ratios, particular eye conditions, and relative luminosity. Using the HTML5 Luminosity API, you can detect the current amount of light reported by the user's device. This allows you to create interfaces that automatically enter "high contrast" dark modes in dim light conditions. By allowing users to switch the dark themes to always be enabled, users with particular eye conditions are given a more legible experience any time of day.
 
-<h3 id="the-fear">FEAR</h3>
-Even those resistant to accessibility best practices gets frustrated when they try to access a non&ndash;responsive and therefore less accessible interface on their smartphone. They care about accessibility too; they just haven't actualized that in their workflow yet. This is likely because they are afraid of their false impression of what they think creating accessible experiences&nbsp;entails.
+## Making Manager Interfaces Lightweight
+Staying away from frameworks helps keep things light, at least until we start using them. It is important to understand that weight is relative to the environment of the DOM. If no frameworks are used, VanillaJS is by far the lightest approach. If frameworks are already being loaded, using a driver specific to that driver may lighten the end payload of the components that make up your interface. Meaning VanillaJS would not be the lightest approach. There are no absolute certainties when optimizing for the web. Keeping in mind the context of the environment you are designing will keep your interface lightweight and responsive.
 
-I encourage you to allow yourself the understanding that fear is often&nbsp;merely:
 
-- <strong>F</strong>alse
-- <strong>E</strong>vidence
-- <strong>A</strong>ppearing
-- <strong>R</strong>eal
 
-So what is the false evidence assumed and why does it appear real to them? They assume accessibility must be "more work" than otherwise. This may not be their fault though. They may have tried to take a non&ndash;accessible experience and &#8220;make it accessible&#8221; without breaking changes long after it has been built. In that case accessibility is not only harder but may be impossible without making significant breaking changes. Imagine trying to install a shower in the middle of a building with concrete floors that wasn't plumbed for it. You'll need a wrecking ball or&nbsp;two. The key is to keep accessibility in mind from the&nbsp;beginning.
+## Making Manager Interfaces Synchronous
+Authoring your interfaces with progressively enhanced HTML allows for an accessible and lightweight experience, but without synchronous pages to handle standard forms they may not be fully functional. It goes without saying that many of the forms in your manager interface will be asynchronously enhanced. Prior to enhancing these forms, test them as standard `<form action>` submissions. Not only will this make your interface accessible in the absence of scripts, it will make your app your stable in the presence of script breakages. JavaScript layer busted on an extra semi-colon? Good thing there is an HTML layer underneath&hellip;
 
-Builders have construction codes that set standards for safety and accessibility. When a builder ignores these codes and refuses to do things like make the entrance wheelchair accessible that building begins to rot the community around it. The community isn't a place of inclusion anymore. That's why there are laws about these things. So why is it any different in the digital&nbsp;industry?
 
-Ironically, the hyper&ndash;accessible nature of the web makes accessibility standards more difficult to enforce and standardize than in other industries. It is much more approachable, and therefore accessible, to spin up a web server and start hosting a website than it is to say buy property, obtain the necessary permits and begin breaking ground. You can have the whole thing done in a few hours even with no experience and next thing you know, you are publishing to the web. Anyone can be a publish to the web. Your journey is to graduate from a web publisher to a web&nbsp;architect.
 
-<h3 id="good-news">The Good News</h3>
-You've been wondering what the good news is in all this so here it is. Accessibility doesn't have to be any more complicated than you make it. If you [begin your experience by writing semantic HTML][1] then it already was accessible before you screwed it up by making it fancy with that one script library or whatever. If you jumped straight into JavaScript and didn't start with HTML the solution is simple. Start completely over, this time with an HTML&ndash;first workflow. HTML is accessible so make sure you start with&nbsp;it.
+## Making Manager Interfaces Usable
+In addition to [guidelines for making web pages usable][6], manager interfaces pose a unique challenge when author for end users. Most websites are designed for consumption. Users come along and eat up all the bytes. Manager interfaces are different. They are designed for authoring, developing, editing, and consuming. Understanding that manager interfaces pose this unique challenge is important. How you keep your manager interface usable will be up to you. Will you create different themes for different user groups? Will you use analytics to change the interface as it is being used? Don't forget that at the end of the day, the best way to know if your interface is usable is do user testing on your target audience. Take any opportunities to conduct user testing without hesitation. Remember that negative feedback from someone who is not part of your target audience may not necessarily be a bad thing.
 
-<h3 id="authorship-is-everything">Authorship is Everything</h3>
-JavaScript is amazing. It gave us the ability to liven what was once a static and synchronous DOM. Modern JavaScript populates and oversees the DOM for us so we stop worrying about it. Here's the problem. The moment you loose authorship of the DOM to scripts you stop architecting the web. Scripts attempt to create a well architected experience but they fool no one when they don't load or a misplaced semicolon breaks your entire experience. Don't be fooled. Remember that as an architect of the web you are responsible for every state of the underlying DOM which makes up the experience of your user just as the Graphic Designer is responsible for each pixel of their&nbsp;design.
+## Making Manager Interfaces Responsive
+Responsive Design is a radical trend. There is an appealing vastness to it. When you consider how your manager interface should respond, challenge yourself to think outside of the width of the viewport. What else should your interface respond to? As your users manage content within your management interface they educate you on both what they use your interface to do and how they prefer to use it. As the architect of a manager interface, you have a valuable opportunity to respond to the habits and preferences your users share with you.
 
-<h3 id="first-byte">The First Byte</h3>
-Whenever you begin authoring a page for the web you should have one thing in mind: The first byte. The first byte is really the most exciting byte if you think about it. It's the moment a connection is made, and someone somewhere decides to start downloading your document. Then they wait. Hopefully not for long, but either way they are waiting for your experience! What does this experience feel like for your users? Does the page begin loading immediately as a legible text document before the assets loads or is it a blank white screen until everything has loaded and the scripts have executed successfully? Does your infinite-scroll one&ndash;page website have a pagination component available for .no-js users to access content or does it just stop at nothing? Is that fancy custom designed select box actually a better user&ndash;experience than a native `<select>` on&nbsp;mobile devices? Be mindful of what you are serving and how if at all it is blocking your content from loading.
+Are you recording user actions in your database that could be used to cleverly present users with widgets and components that are relevant to their recent or most recently performed actions?
 
-<h3 id="truth-about-poor-ux">The Truth about Poor User&ndash;Experience</h3>
-When there is a truly poor user experience the root issue can often be traced back to HTML not being first and foremost in the design and development processes. Either semantic HTML for your experience didn't exist as a base layer or you screwed it up during the process of styling and enhancing it.
+The database isn't the only place to look for data to respond to. The JavaScript Session Storage and Location Storage API can be used to store user preferences, actions, or anything else!
 
-<h3 id="allowing-a11y-into-your-experience">Allowing Accessibility into your Experience</h3>
-We've established that HTML is inherently accessible. Leverage this by serving HTML upfront. This may mean an HTML&ndash;layer underneath your asynchronous React component. Maybe it is as simple as a few `<noscript>` tags used to inform users that a given component is disabled and requires them to Enable JavaScript to be used. Start with HTML, get as far as you can, and enhance from there. If a component requires something make sure to inform your users of that. For&nbsp;example:
+<h2 id="authoring-framework-agnostic-apis">Authoring Framework Agnostic APIs</h2>
 
-```html
-<noscript>  
-  <aside class="alert">  
-    <p>Please <a class="apparent-link" href="http://enable-javascript.com" target="_blank">enable <code>JavaScript</code></a> for to use this&nbsp;component.</p>    
-  </aside>
-</noscript>
+Web Standards are constantly evolving in an era of browsers that continuously update themselves. There's never been a better time to keep the dependency of a framework out of your API. "VanillaJS", or in other words IE9+, [allows for XHR requests to be made][5] to send and receive data from the server with plain old JavaScript! By writing VanillaJS you'll be giving up some of the "shortcut" familiarities of your favorite library, but your API will lightweight and less opinionated. You'll be directly using the native APIs of JavaScript meaning as part of the browser your API updates itself automatically overnight. For example take this excerpt from&nbsp;[youmightnotneedjquery.com](http://youmightnotneedjquery.com/#request):
+
+#### VanillaJS
+```
+function getAJAX(url) {
+  var request = new XMLHttpRequest();
+  request.open('GET', url, true);
+
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      var resp = request.responseText;
+    } else {
+      // We reached our target server, but it returned an error
+
+    }
+  };
+
+  request.onerror = function() {
+    // There was a connection error of some sort
+  };
+
+  request.send();
+}
 ```
 
-If you do override native inputs at least give your users an option to configure whether or not native components are overridden on their [settings page][2]. That's right, users should have a settings page for just about anything you build even if it is a simple website. We'll get to settings more in the [configurable&nbsp;section](#making-pages-configurable).
+With VanillaJS, your dependency payload is 0kb and you don't have to worry about frameworks becoming outdated or out of style. This isn't to say that frameworks and libraries don't have their appeal as well. When using a framework or library, do so as a driver by mimicking the same functionality using your dependent API:
 
-The truth is accessibility is the hidden rockstar behind what makes everything cool. Siri, Responsive Design, Dictation, these are really just accessibility features created by designers who reached for creating hyper&ndash;accessible interfaces. It took striving for  hyper&ndash;accessibility to actualize these features that become of benefit to all users. Even those who may not rely entirely on these considerations enjoy them thouroughly. The architects of these considerations started with accessibility in mind and created incredible things. You can too.
+#### jQuery
+```
+function getAJAX(url) {
+  $.ajax({
+    type: 'GET',
+    url: url,
+    success: function(resp) {
 
-<h3 id="a11y-tips">Accessibility Tips</h3>
+    },
+    error: function() {
 
-  - By [sticking components above the fold](http://markup.tips/tips/sticking-components-above-the-fold.html#focus) and using anchor tags to "jump" passed them you can achieve the familiar experience of having an ever&ndash;present navigational component always nearby in a more accessible and responsive manor than say a left&ndash;hand tree component.<br><br>
+    }
+  });
+}
+```
 
-  - Before you put something behind a modal window make sure that content is accessible as HTML in some way. Maybe you link to another page. Maybe you make clever use of an `<iframe>` within a `<noscript>` tag to load one page as a component within another.<br><br>
+If you must leverage a framework in your API, leverage it as a driver. This way, user running AngularJS can implement the AngularJS "js-driver", users running React can implement the React "js-driver" and users not necessarily running either implement the standard VanillaJS driver. With test-driven development and managers of each driver, tests can be written, passed in VanillaJS, forked and modified to pass in the given framework or flavor, then submitted back as a driver. Without this sort of process, framework agnostic drivers probably aren't plausible. You can't have features being development on a whim within a driver. Test need to be written, passed in the default driver, and enhanced with frameworks and libraries. Framework Agnostic JavaScript APIs are a lot to maintain but they achieve a heroic like ability to step into any environment as an efficient and compatible enhancement.
 
-  - Before you create that familiar horizontal slider ensure that for `.no-js` users the slides stack vertically so they can all be viewed synchronously.
+## Framework Agnostic Components
+When creating websites we have a great deal of control over what frameworks, if any, we chose to use. When creating dynamic manager interfaces that support plugins all control goes out the window. To design lightweight components, design them with responsive drivers.
 
-<h3 id="scripts-at-the-bottom">Scripts at the Bottom of your Process</h3>
-Just as you should be [loading your scripts at the bottom][3] of your HTML document, scripts should also come at the bottom of your process. Try to follow a process roughly consisting of:
+Similarly to <a href="#authoring-framework-agnostic-apis">authoring Framework Agnostic APIs</a>, components can be enhanced with individual drivers. This allows them be efficiently included within a number of different environments with the same look and feel, the same features, but a different driver powering things under the hood. In theory, you should be able to swap between drivers of your components with no indication of difference between the two detected by your user. The need for framework agnostic components presents itself after you've authored a VanillaJS component and realized that while your component can justly claim a light payload, when it is included within certain environments it may actually become bloated. How could this be so? Let's say your VanillaJS script has a payload of 600kb. If your script were flavored with AngularJS instead, it could weight only 400kb. AngularJS itself weights 700kb. For a page loading this component alone, it would not make sense to add 700kb for a savings of 200kb. However, when your component is used within an environment that is already leveraging and depending on Angular anyways, now your VanillaJS driver has 200kb of bloat. With no additional cost to using AngularJS, your AngularJS driver now has a net savings of 200kb.
 
-- Sketch
-- Wireframe
-- Clickable HTML
-- Make HTML pretty with CSS
-- Lastly make stuff fancy with JS
 
- Remember that the inaccessible experience was either born of another process or simply buggered things up a bit in the last two steps. Maybe the CSS is styled in such a way that it doesn't accommodate for how a page is loaded without certain features. Or maybe when the JavaScript was implemented some of the HTML layer was removed rather than enhanced. The key is the third step. By authoring functional HTML with native inputs and synchronous forms before styling and enhancing the experience you will begin baking accessibility into your experiences without even realizing&nbsp;it.
+## Register Client Scripts Responsively
+Now that your components are flexible and enhanceable with a variety of js-drivers they are ready to respond to whatever environment they become apart of. Use feature detection in your scripts to detect your targeted frameworks and decide which to load.
 
-<h2 id="making-pages-audible">Making Pages Audible</h2>
-Writing semantic HTML will make your pages usable to people using screen readers to hear, rather than see, your experience. With jquery.speakable.js you can [create your own simple audio component that reads parts of your document][4] as you wish. For example, you could create a component beneath the title that says &#8220;This posts is a 10 minute read but can be listened to as well&#8221; that will play the blog post like an audio track. It's pretty neat, and works with your HTML by offering classes like `.unspeakable` to do things like specify parts of pages that should not be read aloud. You can even do things like make sure each letter of an acronym is spoken as the corresonponding&nbsp;word.
-
-<h2 id="making-pages-configurable">Making Pages Configurable</h2>
-Before you create a web interface allow yourself to consider the following configuration options for improving User Experience. Allow your users to:
-
- - [Change font&ndash;size][2]
- - [Change font&ndash;face][2]
- - Disable font&ndash;face
- - [Enable a High&ndash;Contrast (or other) theme][2]
- - [Configure the voice used to read posts][2]
- - Opt out of loading high&ndash;resolution assets
-
-HTML5 makes this quick and easy with standard features like localStorage.
-
-<h2 id="making-pages-enhanceable">Making Pages Enhanceable</h2>
-progressive enhancement, feature detection, semantic, synchronous
-
-<h2 id="making-pages-legible">Making Pages Legible</h2>
-Legibility can be overlooked in the name of Graphic Design. I'm guilty of this myself. Designers love clean, crisp, small and sometimes even subtle type. Sometimes we get too carried away with how our content looks than how able it is to be accessed. Usually it comes down to color and contrast. Either we make the type too small or too subtle in color against the background. Soft grays on white are a popular design trend, but if the gray is too soft the type becomes illegible. webaim.org has a wonderful online [Color Contrast Checker](http://webaim.org/resources/contrastchecker/). You put in the foreground and background colors of your design and it will tell you if they are considered safe. Cool!
-
-Regarding type size there are two main things to keep in mind:
-
-  - [Style your CSS layout using em units][5] when appropriate so that your layout handles increasing the browser font&ndash;size well
-  - [Give users a way to set their font&ndash;size preference for size and font&ndash;face][2] on their settings page
-
-Setting a max&ndash;width using em units is a great way to ensure a block of text stays legible in wide viewports. Once you reach a certain number of characters without a line break text becomes less legible regardless of size. Typographic orphans occur when the last word in a line or paragraph of text winds up all alone on it's own line. You can [cleverly adopt orphans][6] using a single HTML entity. There are also [RegEx Patterns available](https://github.com/jpdevries/wool) for you to fight all 10 Typographic Crimes.
-
-<h2 id="making-pages-optimal">Making Pages Optimal</h2>
-Frameworks are handy, but unless they are silent they are probably heavy. As a Front&ndash;End Developer you should be keeping an eye on the weight of your project. If you are only making use of a small portion of a framework is there a way to do without it or include less of the framework? Maybe you can use silent Sass libraries instead of including large amounts of unused CSS.
-
-Once you start examining each and every byte of your dependencies you may even find yourself question if jQuery is worth the weight. If you can get by with modern VanillaJS your experience will be that much snappier.
-
-Many stress the importance of minifying their assets for production but it is less commonly understood that [minification makes little difference when assets are served over GZIP](https://css-tricks.com/the-difference-between-minification-and-gzipping/). The moral of the story isn't that you are off the hook for minifying assets like CSS and JavaScript. You should still do that. The moral of the story is that GZIP makes a really big difference, so you should make sure you are serving your assets using GZIP compression.
-
-If you author your CSS using Sass you can make use of Silent Classes. Silent Classes allow you to group common blocks of styles together. By making use of silent classes you will be keeping your CSS weight down because selectors will be bundled together to reduce the total number of style definitions in your stylesheet.
-
-Tools like Grunt or Gulp can help you create your own workflow using nothing more than some JavaScript and a few terminal commands. If this is totally new to you check out Chris Coyier's introductory post.
-
-<h2 id="making-pages-usable">Making Pages Usable</h2>
-Here's the beauty of these guidelines. This part is automatically inherited from initially [making your pages accessibility](#making-pages-accessible). Yup. You can create a usable experience that isn't accessible but you cannot create an accessible experience that isn't usable. Knowing this simple truth helps us know where to start, with HTML&ndash;first!
-
-<h2 id="conclusion">Conclusion</h2>
-These guidelines are nothing more than that, guidelines. Whether you are a complete greenhorn or have been at this for years they exist to help you make sense of this intriquit web we spin. May they assist you in spinning a silk that is of your own and for the world to enjoy.
+## Leveraging the Browser Cache
+When creating websites, front end assets are commonly concatenated together to reduce the number of HTTP requests. When creating manager interfaces, combining assets together can actually become anti-optimization by increasing the payload as users browse from page to page. Techniques like reducing HTTP requests and inlining critical styles are designed to optimize initial page loads. They do not target return visits or visits to pages within the same site. Remember that you are designing a manager interface not a website. The two are not the same and do not have the same optimization best practices. When designing multi-page experiences sit back and let the cacheable HTTP request pile up. By allowing the assets to load independently they are commonly cacheable across pages.

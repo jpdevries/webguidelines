@@ -148,7 +148,7 @@ If you author your CSS using Sass you can make use of Silent Classes. Silent Cla
 Tools like Grunt or Gulp can help you create your own workflow using nothing more than some JavaScript and a few terminal commands. If this is totally new to you check out Chris Coyier's introductory post.
 
 <h2 id="making-pages-usable">Making Pages Usable</h2>
-Here's the beauty of these guidelines. This part is automatically inherited from initially [making your pages accessibility](#making-pages-accessible). Yup. You can create a usable experience that isn't accessible but you cannot create an accessible experience that isn't usable. Knowing this simple truth helps us know where to start, with HTML&ndash;first!
+Here's the beauty of these guidelines. This part is automatically inherited from initially [making your pages accessibile](#making-pages-accessible). Yup. You can create a usable experience that isn't accessible but you cannot create an accessible experience that isn't usable. Knowing this simple truth helps us know where to start, with HTML&ndash;first!
 
 <h2 id="conclusion">Conclusion</h2>
 These guidelines are nothing more than that, guidelines. Whether you are a complete greenhorn or have been at this for years they exist to help you make sense of this intriquit web we spin. May they assist you in spinning a silk that is of your own and for the world to enjoy.

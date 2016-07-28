@@ -5,10 +5,10 @@
 [5]:https://css-tricks.com/why-ems/
 [6]:http://markup.tips/tips/adopting-orphans.html#focus
 
-# Web Guidelines 0.0
+# Web Guidelines 0.1
 WIP. Best practices to use when building any web based&nbsp;experience.
 
-<h2 id="toc">Table of Contents</h2>
+«<h2 id="toc">Table of Contents</h2>»
 
 <ol>
   <li><a href="#preface">Preface</a></li>
@@ -33,7 +33,11 @@ Know that your HTML documents aren't written in stone; they are alive. The exper
 
 As you work through these guidelines your hyper&ndash;text documents will begin to make use of the evolving browsers that interpret them. As new features land in browsers your experience becomes lighter and more enhanced with time. That is the signature of a Front&ndash;End Developer, and you'll learn to sign it in your own way.
 
-<a name="we-are-all-disabled">Understand that we are all disabled</a>. Our abilities are relative to the context of the device we access an experience through. Know that there are people and there are users. One person can be many different users in any given day. As you go from using a high powered desktop and mouse&ndash;enabled computer to using a cellular low&ndash;power touch device your abilities change. You may be the same person but you are now a &#8220;disabled&#8221; user frustrated that the interfaces you are trying to access aren't designed to accommodate your current abilities.
+<a name="accessibility-is-for-everyone">Understand that accessibility is for everyone</a>. All of us are users all of the time: we use handles to open doors, wheels to drive our cars, and utensils to eat food. Every _tool_ we utilize is something that gives us _access_ to our environment or the ability to complete a task which might otherwise have been impossible, and these tools &ndash; including tools you provide as a front-end web developer &ndash; define what kind of _user_ we are in a given context.
+
+With the many different ways to access the web, and the just-as-many tools to with which to do it, you must keep in mind that one person can be many different users on any given day. As our user shifts a high powered desktop and mouse&ndash;enabled computer to using a cellular low&ndash;power touch device, their method of access changes. If you don't design your UI for the right use cases, even the [fictional](https://standardbeagle.com/the-frp-post-sxsw-part-2-no-average-user/) "average" user you designed for will be left frustrated and locked out of your application.
+
+Herein is the crux of the web's accessibility issue: UIs that _do_ work for the user you target might be difficult or impossible for a disabled person to use. If you start your application with complete, meaningful user access in mind, it will be better for everyone.
 
 The thought of crafting experiences that can be used by anyone daunts you until you discover that accessibility isn't something you have to roll up your sleeves and add to your experience somehow at the end. Authoring pages HTML&ndash;first allows interfaces to be enhanced and a-synchronized in a progressive, rather than an aggressive manor. At ground&ndash;level we have an experience that anyone can access before we even start styling it with CSS and long before we enhance it with asynchronous&nbsp;scripts.
 

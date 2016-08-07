@@ -95,10 +95,8 @@ The truth is accessibility is the hidden rockstar behind what makes everything c
 
 <h3 id="a11y-tips">Accessibility Tips</h3>
 
-  - By [sticking components above the fold](http://markup.tips/tips/sticking-components-above-the-fold.html#focus) and using anchor tags to "jump" passed them you can achieve the familiar experience of having an ever&ndash;present navigational component always nearby in a more accessible and responsive manor than say a left&ndash;hand tree component.<br><br>
-
-  - Before you put something behind a modal window make sure that content is accessible as HTML in some way. Maybe you link to another page. Maybe you make clever use of an `<iframe>` within a `<noscript>` tag to load one page as a component within another.<br><br>
-
+  - By [sticking components above the fold](http://markup.tips/tips/sticking-components-above-the-fold.html#focus) and using anchor tags to "jump" passed them you can achieve the familiar experience of having an ever&ndash;present navigational component always nearby in a more accessible and responsive manor than say a left&ndash;hand tree component. 
+  - Before you put something behind a modal window make sure that content is accessible as HTML in some way. Maybe you link to another page. Maybe you make clever use of an `<iframe>` within a `<noscript>` tag to load one page as a component within another.<br>
   - Before you create that familiar horizontal slider ensure that for `.no-js` users the slides stack vertically so they can all be viewed synchronously.
 
 <h3 id="scripts-at-the-bottom">Scripts at the Bottom of your Process</h3>

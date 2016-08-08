@@ -4,11 +4,13 @@
 [4]:http://markup.tips/tips/making-your-markup-speak.html#focus
 [5]:https://css-tricks.com/why-ems/
 [6]:http://markup.tips/tips/adopting-orphans.html#focus
+[7]:https://standardbeagle.com/the-frp-post-sxsw-part-2-no-average-user/
+[8]:https://24ways.org/2013/grunt-is-not-weird-and-hard/
 
 # Web Guidelines 0.1
 WIP. Best practices to use when building any web based&nbsp;experience.
 
-«<h2 id="toc">Table of Contents</h2>»
+<h2 id="toc">Table of Contents</h2>
 
 <ol>
   <li><a href="#preface">Preface</a></li>
@@ -35,7 +37,7 @@ As you work through these guidelines your hyper&ndash;text documents will begin 
 
 <a name="accessibility-is-for-everyone">Understand that accessibility is for everyone</a>. All of us are users all of the time: we use handles to open doors, wheels to drive our cars, and utensils to eat food. Every _tool_ we utilize is something that gives us _access_ to our environment or the ability to complete a task which might otherwise have been impossible, and these tools &ndash; including tools you provide as a front-end web developer &ndash; define what kind of _user_ we are in a given context.
 
-With the many different ways to access the web, and the just-as-many tools to with which to do it, you must keep in mind that one person can be many different users on any given day. As our user shifts a high powered desktop and mouse&ndash;enabled computer to using a cellular low&ndash;power touch device, their method of access changes. If you don't design your UI for the right use cases, even the [fictional](https://standardbeagle.com/the-frp-post-sxsw-part-2-no-average-user/) "average" user you designed for will be left frustrated and locked out of your application.
+With the many different ways to access the web, and the just-as-many tools to with which to do it, you must keep in mind that one person can be many different users on any given day. As our user shifts a high powered desktop and mouse&ndash;enabled computer to using a cellular low&ndash;power touch device, their method of access changes. If you don't design your UI for the right use cases, even the [fictional][7] "average" user you designed for will be left frustrated and locked out of your application.
 
 Herein is the crux of the web's accessibility issue: UIs that _do_ work for the user you target might be difficult or impossible for a disabled person to use. If you start your application with complete, meaningful user access in mind, it will be better for everyone.
 
@@ -95,10 +97,8 @@ The truth is accessibility is the hidden rockstar behind what makes everything c
 
 <h3 id="a11y-tips">Accessibility Tips</h3>
 
-  - By [sticking components above the fold](http://markup.tips/tips/sticking-components-above-the-fold.html#focus) and using anchor tags to "jump" passed them you can achieve the familiar experience of having an ever&ndash;present navigational component always nearby in a more accessible and responsive manor than say a left&ndash;hand tree component.<br><br>
-
-  - Before you put something behind a modal window make sure that content is accessible as HTML in some way. Maybe you link to another page. Maybe you make clever use of an `<iframe>` within a `<noscript>` tag to load one page as a component within another.<br><br>
-
+  - By [sticking components above the fold](http://markup.tips/tips/sticking-components-above-the-fold.html#focus) and using anchor tags to "jump" passed them you can achieve the familiar experience of having an ever&ndash;present navigational component always nearby in a more accessible and responsive manor than say a left&ndash;hand tree component.
+  - Before you put something behind a modal window make sure that content is accessible as HTML in some way. Maybe you link to another page. Maybe you make clever use of an `<iframe>` within a `<noscript>` tag to load one page as a component within another.<br>
   - Before you create that familiar horizontal slider ensure that for `.no-js` users the slides stack vertically so they can all be viewed synchronously.
 
 <h3 id="scripts-at-the-bottom">Scripts at the Bottom of your Process</h3>
@@ -149,7 +149,7 @@ Many stress the importance of minifying their assets for production but it is le
 
 If you author your CSS using Sass you can make use of Silent Classes. Silent Classes allow you to group common blocks of styles together. By making use of silent classes you will be keeping your CSS weight down because selectors will be bundled together to reduce the total number of style definitions in your stylesheet.
 
-Tools like Grunt or Gulp can help you create your own workflow using nothing more than some JavaScript and a few terminal commands. If this is totally new to you check out Chris Coyier's introductory post.
+Tools like Grunt or Gulp can help you create your own workflow using nothing more than some JavaScript and a few terminal commands. If this is totally new to you check out Chris Coyier's [introductory post][8].
 
 <h2 id="making-pages-usable">Making Pages Usable</h2>
 Here's the beauty of these guidelines. This part is automatically inherited from initially [making your pages accessibile](#making-pages-accessible). Yup. You can create a usable experience that isn't accessible but you cannot create an accessible experience that isn't usable. Knowing this simple truth helps us know where to start, with HTML&ndash;first!
